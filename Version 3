@@ -1,0 +1,104 @@
+//This version of the code, that displays the numbers 0 to 9 on a single digit seven segment, is written with for loops and arrays 
+//to display the numbers 0 to 9 on the single digit seven segment
+
+//this defines each pin as a letter and each letter is a pin on the single digit seven segement 
+int A = 7;
+int B = 8;
+int C = 9;
+int D = 10;
+int E = 11;
+int F = 12;
+int G = 13;
+
+//this variable allows to control the delay between each number displayed in milliseconds
+int time = 1000;
+
+//this variable is used to define each pin being used on the arduino as an output
+int i;
+
+//this array called myPins places all the pins inside of it in the positions 0 to 6
+int myPins[] = {A,B,C,D,E,F,G};
+
+//these arrays set the output of the pins inthe previous array to create the numbers 0 to 9
+int zero[]= {1,1,1,1,1,1,0};
+int one[]= {0,1,1,0,0,0,0};
+int two[]= {1,1,0,1,1,0,1};
+int three[]={1,1,1,1,0,0,1};
+int four[]={0,1,1,0,0,1,1};
+int five[]={1,0,1,1,0,1,1};
+int six[]= {1,0,1,1,1,1,1};
+int seven[]={1,1,1,0,0,0,0};
+int eight[]={1,1,1,1,1,1,1};
+int nine[]={1,1,1,1,0,1,1};
+
+//this sets all the following pins as outputs
+void setup(){
+//this for loop sets the pins in the myPins array as outputs  
+for(i=0; i<7; i++){
+pinMode(myPins[i],OUTPUT);
+}
+}
+
+//this loop displays the numbers 0 to 9 with a 1 sec delay between each number using the previous arrays
+void loop(){
+
+//zero
+for(i=0; i<7; i++){  
+digitalWrite(myPins[i],zero[i]);
+}
+delay(time);
+
+//one
+for(i=0; i<7; i++){
+digitalWrite(myPins[i],one[i]);
+}
+delay(time);
+
+//two
+for(i=0; i<7; i++){
+digitalWrite(myPins[i],two[i]);
+}
+delay(time);
+
+//three
+for(i=0; i<7; i++){
+digitalWrite(myPins[i],three[i]);
+}
+delay(time);
+
+//four
+for(i=0; i<7; i++){
+digitalWrite(myPins[i],four[i]);
+}
+delay(time);
+
+//five
+for(i=0; i<7; i++){
+digitalWrite(myPins[i],five[i]);
+}
+delay(time);
+
+//six
+for(i=0; i<7; i++){
+digitalWrite(myPins[i],six[i]);
+}
+delay(time);
+
+//seven
+for(i=0; i<7; i++){
+digitalWrite(myPins[i],seven[i]);
+}
+delay(time);
+
+//eight
+for(i=0; i<7; i++){
+digitalWrite(myPins[i],eight[i]);
+}
+delay(time);
+
+//nine
+for(i=0; i<7; i++){
+digitalWrite(myPins[i],nine[i]);
+}
+delay(time);
+}
