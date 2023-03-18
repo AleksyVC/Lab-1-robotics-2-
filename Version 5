@@ -1,0 +1,161 @@
+//This version of the code, that displays the numbers 0 to 9 on a single digit seven segment, is written with for loops, arrays, functions and switch case
+//to display the numbers 0 to 9 on the single digit seven segment
+
+//this defines each pin as a letter and each letter is a pin on the single digit seven segement 
+int A = 7;
+int B = 8;
+int C = 9;
+int D = 10;
+int E = 11;
+int F = 12;
+int G = 13;
+
+//this variable allows to control the delay between each number displayed in milliseconds
+int time = 1000;
+
+//this variable is used to define each pin being used on the arduino as an output
+int i;
+
+//this variable is used to transition for each number in the switch case
+int n;
+
+//this array called myPins places all the pins inside of it in the positions 0 to 6
+int myPins[] = {A,B,C,D,E,F,G};
+
+//these arrays set the output of the pins inthe previous array to create the numbers 0 to 9
+int Zero[]= {1,1,1,1,1,1,0};
+int One[]= {0,1,1,0,0,0,0};
+int Two[]= {1,1,0,1,1,0,1};
+int Three[]={1,1,1,1,0,0,1};
+int Four[]={0,1,1,0,0,1,1};
+int Five[]={1,0,1,1,0,1,1};
+int Six[]= {1,0,1,1,1,1,1};
+int Seven[]={1,1,1,0,0,0,0};
+int Eight[]={1,1,1,1,1,1,1};
+int Nine[]={1,1,1,1,0,1,1};
+
+//this sets all the following pins as outputs
+void setup(){
+for(i=0; i<7; i++){
+//this for loop sets the pins in the myPins array as outputs   
+pinMode(myPins[i],OUTPUT);
+}
+}
+
+//the following functions are used to display the numbers 0 to 9
+void zero(){
+for(i=0; i<7; i++){
+digitalWrite(myPins[i],Zero[i]);
+}
+}
+
+void one(){
+for(i=0; i<7; i++){
+digitalWrite(myPins[i],One[i]);
+}
+}
+
+void two(){
+for(i=0; i<7; i++){
+digitalWrite(myPins[i],Two[i]);
+}
+}
+
+void three(){
+for(i=0; i<7; i++){
+digitalWrite(myPins[i],Three[i]);
+}
+}
+
+void four(){
+for(i=0; i<7; i++){
+digitalWrite(myPins[i],Four[i]);
+}
+}
+
+void five(){
+for(i=0; i<7; i++){
+digitalWrite(myPins[i],Five[i]);
+}
+}
+
+void six(){
+for(i=0; i<7; i++){
+digitalWrite(myPins[i],Six[i]);
+}
+}
+
+void seven(){
+for(i=0; i<7; i++){
+digitalWrite(myPins[i],Seven[i]);
+}
+}
+
+void eight(){
+for(i=0; i<7; i++){
+digitalWrite(myPins[i],Eight[i]);
+}
+}
+
+void nine(){
+for(i=0; i<7; i++){
+digitalWrite(myPins[i],Nine[i]);
+}
+}
+
+//this loop uses a for loop and switch case to display the numbers 0 to 9
+void loop() {
+for (int n = 0; n <= 9; n++) {
+switch (n) {
+case 0:
+zero();
+delay(time);
+break;
+
+case 1:
+one();
+delay(time);
+break;
+
+case 2:
+two();
+delay(time);
+break;
+
+case 3:
+three();
+delay(time);
+break;
+
+case 4:
+four();
+delay(time);
+break;
+
+case 5:
+five();
+delay(time);
+break;
+
+case 6:
+six();
+delay(time);
+break;
+
+case 7:
+seven();
+delay(time);
+break;
+
+case 8:
+eight();
+delay(time);
+break;
+
+case 9:
+nine();
+delay(time);
+break;
+}
+}
+}
