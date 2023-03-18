@@ -1,0 +1,127 @@
+//This version of the code, that displays the numbers 0 to 9 on a single digit seven segment, is written in the simplest (and longest) way
+
+//this defines each pin as a letter and each letter is a pin on the single digit seven segement 
+int A = 7;
+int B = 8;
+int C = 9;
+int D = 10;
+int E = 11;
+int F = 12;
+int G = 13;
+
+//this variable allows to control the delay between each number displayed in milliseconds
+int time = 1000;
+
+//this sets all the following pins as outputs
+void setup(){
+pinMode(A,OUTPUT);
+pinMode(B,OUTPUT);
+pinMode(C,OUTPUT);
+pinMode(D,OUTPUT);
+pinMode(E,OUTPUT);
+pinMode(F,OUTPUT);
+pinMode(G,OUTPUT);
+}
+
+//this loop displays the numbers 0 to 9 with a 1 sec delay between each number
+void loop(){
+//Zero
+digitalWrite(A, 1);
+digitalWrite(B, 1);
+digitalWrite(C, 1);
+digitalWrite(D, 1);
+digitalWrite(E, 1);
+digitalWrite(F, 1);
+digitalWrite(G, 0);
+delay(time);
+  
+//One
+digitalWrite(A, 0);
+digitalWrite(B, 1);
+digitalWrite(C, 1);
+digitalWrite(D, 0);
+digitalWrite(E, 0);
+digitalWrite(F, 0);
+digitalWrite(G, 0);
+delay(time);
+  
+//Two
+digitalWrite(A, 1);
+digitalWrite(B, 1);
+digitalWrite(C, 0);
+digitalWrite(D, 1);
+digitalWrite(E, 1);
+digitalWrite(F, 0);
+digitalWrite(G, 1);
+delay(time);
+  
+//Three
+digitalWrite(A, 1);
+digitalWrite(B, 1);
+digitalWrite(C, 1);
+digitalWrite(D, 1);
+digitalWrite(E, 0);
+digitalWrite(F, 0);
+digitalWrite(G, 1);
+delay(time);
+
+//Four
+digitalWrite(A, 0);
+digitalWrite(B, 1);
+digitalWrite(C, 1);
+digitalWrite(D, 0);
+digitalWrite(E, 0);
+digitalWrite(F, 1);
+digitalWrite(G, 1);
+delay(time);
+  
+//Five
+digitalWrite(A, 1);
+digitalWrite(B, 0);
+digitalWrite(C, 1);
+digitalWrite(D, 1);
+digitalWrite(E, 0);
+digitalWrite(F, 1);
+digitalWrite(G, 1);
+delay(time);
+  
+//Six
+digitalWrite(A, 1);
+digitalWrite(B, 0);
+digitalWrite(C, 1);
+digitalWrite(D, 1);
+digitalWrite(E, 1);
+digitalWrite(F, 1);
+digitalWrite(G, 1);
+delay(time);
+  
+//Seven
+digitalWrite(A, 1);
+digitalWrite(B, 1);
+digitalWrite(C, 1);
+digitalWrite(D, 0);
+digitalWrite(E, 0);
+digitalWrite(F, 0);
+digitalWrite(G, 0);
+delay(time);
+  
+//Eight
+digitalWrite(A, 1);
+digitalWrite(B, 1);
+digitalWrite(C, 1);
+digitalWrite(D, 1);
+digitalWrite(E, 1);
+digitalWrite(F, 1);
+digitalWrite(G, 1);
+delay(time);
+  
+//Nine
+digitalWrite(A, 1);
+digitalWrite(B, 1);
+digitalWrite(C, 1);
+digitalWrite(D, 1);
+digitalWrite(E, 0);
+digitalWrite(F, 1);
+digitalWrite(G, 1);
+delay(time);
+}
